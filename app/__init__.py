@@ -1,4 +1,8 @@
-from flask import Flask
+from flask import (
+    Flask,
+    render_template,
+)
+from app.packages import blog
 
 
 def create_app():
@@ -6,8 +10,5 @@ def create_app():
             import_name=__name__,
             )
 
-    @app.route("/")
-    def hello():
-        return "hello"
-
+    app.register_blueprint(blog.bp)
     return app

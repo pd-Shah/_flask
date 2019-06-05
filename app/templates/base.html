@@ -2,12 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>static</title>
+    <title></title>
   </head>
   <body>
-    static
+    <ul>
+      <li> <a href="{{ url_for('blog.index') }}"> Home </a> </li>
+    </ul>
     {% block content %}
     {% endblock %}
-    static
+
   </body>
 </html>
